@@ -1,10 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-export default class Habit extends Component {
-  state = {
-    count: 0,
-  };
-
+export default class Habit extends PureComponent {
   handleIncrement = () => {
     this.props.onIncrement(this.props.habit);
   };

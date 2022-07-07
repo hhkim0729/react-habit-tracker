@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-export default class HabitAddForm extends Component {
+export default class HabitAddForm extends PureComponent {
   inputRef = React.createRef();
 
   handleAdd = (event) => {
