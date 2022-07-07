@@ -1,13 +1,13 @@
-import React, { PureComponent } from 'react';
+import React, { memo } from 'react';
 
-export default class Header extends PureComponent {
-  render() {
-    return (
-      <header className="header">
-        <i className="fa-solid fa-calendar-check header-icon"></i>
-        <span className="header-title">Habit Tracker</span>
-        <span className="header-count">{this.props.totalCount}</span>
-      </header>
-    );
-  }
-}
+const Header = memo(({ totalCount }) => {
+  return (
+    <header className="header">
+      <i className="fa-solid fa-calendar-check header-icon"></i>
+      <span className="header-title">Habit Tracker</span>
+      <span className="header-count">{totalCount}</span>
+    </header>
+  );
+});
+
+export default Header;
